@@ -1,0 +1,22 @@
+$color: linear-gradient(
+    45deg,
+    rgba(106, 90, 255, 1) 0%,
+    rgba(0, 211, 195, 1) 100%
+);
+
+#app {
+    font-family: Aeonik, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+
+.default-color {
+    color: $color;
+}
+
+.default-background-color {
+    background: $color;
+}

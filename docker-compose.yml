@@ -1,12 +1,12 @@
-version: '3.8'
+version: '3.7'
 services:
-    vue-ui:
-        build:
-          context: ./
-          dockerfile: Dockerfile
-        ports:
-          - "8080:8080"
-        container_name: vue-ui
-        volumes:
-           - ./:/usr/src/spa
-           - /usr/src/spa/node_modules
+  vue-ui:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: vue-ui
+    volumes:
+      - ./:/usr/src/spa
+      - /usr/src/spa/node_modules
