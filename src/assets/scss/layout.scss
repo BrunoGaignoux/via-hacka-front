@@ -1,3 +1,12 @@
+@import 'primeflex/src/_variables';
+@import 'primeflex/src/_grid';
+@import 'primeflex/src/_formlayout';
+@import 'primeflex/src/_display';
+@import 'primeflex/src/_text';
+@import 'primeflex/src/flexbox/_flexbox';
+@import 'primeflex/src/_spacing';
+@import 'primeflex/src/_elevation';
+
 $color: linear-gradient(
     45deg,
     rgba(106, 90, 255, 1) 0%,

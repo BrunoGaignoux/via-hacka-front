@@ -1,19 +1,22 @@
 <template>
-  <vs-navbar class="default-background-color mb-10" collapse>
-      <!-- <template #left>
-        <vs-button icon border color="rgb(59,222,200)">
-          <box-icon name="menu"/>
-        </vs-button>
-      </template> -->
-      <div slot="title">
-        <vs-navbar-title>
-          Painel do Seller
-        </vs-navbar-title>
+  <div>
+    <div class="default-background-color mb-10 p-grid p-shadow-8">
+      <div class="p-col">
+        <box-icon name="menu" color="#fff"/>
       </div>
-      <!-- <template #right>
-        <box-icon name="exit"></box-icon>
-      </template> -->
-    </vs-navbar>
+      <div class="p-col">
+          Painel do Seller
+      </div>
+      <div class="p-col">
+        <box-icon name="exit" color="#fff"></box-icon>
+      </div>
+    </div>
+    <div class="p-shadow-8">
+      <div class="p-col p-m-3 p-p-2">
+        4
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -25,13 +28,6 @@ export default {
 .mb-10 {
   margin-bottom: 10px;
   padding: 10px;
-
-  button span.btn-responsive-line {
-    background: #fff;
-  }
-
-  .vs-navbar--title {
-    color: #fff;
-  }
+  color: #fff;
 }
 </style>

@@ -1,16 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Vuesax from 'vuesax'
+import PrimeVue from 'primevue/config'
 
-import 'vuesax/dist/vuesax.css'
 import './assets/scss/layout.scss'
+import 'primeicons/primeicons.css'
+import 'primevue/resources/primevue.min.css'
+import 'primevue/resources/themes/bootstrap4-dark-blue/theme.css'
+import 'primeflex/primeflex.css'
+
 import 'boxicons'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuesax, {
-  // options here
-})
+Vue.use(PrimeVue, { ripple: true })
 
 new Vue({
   render: h => h(App)
