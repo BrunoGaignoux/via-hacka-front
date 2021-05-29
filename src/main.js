@@ -10,6 +10,12 @@ import 'primeflex/primeflex.css'
 
 import 'boxicons'
 
+import Button from 'primevue/button'
+import Chart from 'primevue/chart'
+
+Vue.component('Button', Button)
+Vue.component('Chart', Chart)
+
 Vue.config.productionTip = false
 
 Vue.use(PrimeVue, { ripple: true })

@@ -11,9 +11,22 @@
         <box-icon name="exit" color="#fff"></box-icon>
       </div>
     </div>
-    <div class="p-shadow-8">
-      <div class="p-col p-m-3 p-p-2">
-        4
+    <div class="p-grid">
+      <div class="p-mt-2 selector">
+        <div class="p-col">
+          <Button
+            label="Hoje"
+            :class="`p-button-rounded p-button-sm text-white ${active == 0 ? 'p-button-primary' : 'p-button-secondary'}`"
+            @click="active = 0"
+          />
+        </div>
+        <div class="p-col">
+          <Button
+            label="Mês"
+            :class="`p-button-rounded p-button-sm text-white ${active == 1 ? 'p-button-primary' : 'p-button-secondary'}`"
+            @click="active = 1"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -21,7 +34,12 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data () {
+    return {
+      active: 0
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -29,5 +47,11 @@ export default {
   margin-bottom: 10px;
   padding: 10px;
   color: #fff;
+}
+.selector {
+  position: relative;
+  left: 87%;
+  width: 120px;
+  display: flex;
 }
 </style>

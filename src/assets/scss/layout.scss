@@ -28,3 +28,15 @@ $color: linear-gradient(
 .default-background-color {
     background: $color !important;
 }
+
+.p-button-primary {
+  color: white !important;
+  font-weight: bold !important;
+  background: #6a5aff !important;
+  border-color: #6a5aff !important;
+
+  &:hover {
+    background: #00d3c3 !important;
+    border-color: #00d3c3 !important;
+  }
+}
