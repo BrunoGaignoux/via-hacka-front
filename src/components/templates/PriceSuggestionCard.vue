@@ -13,7 +13,7 @@
     </div>
     <Card class="p-shadow-4 p-my-3">
       <template #content>
-        <DataTable :value="skusList" :paginator="true" :rows="10"
+        <DataTable :value="skusList" :paginator="true" :rows="10" :rowClass="rowClass"
           dataKey="id" :filters="filters" :loading="loading">
           <template #empty>
               Nenhuma sugestão encontrada.
@@ -22,24 +22,24 @@
               Carregando sugestões. Aguarde.
           </template>
           <Column field="sku" header="SKU">
-              <template #body="slotProps">
-                  {{ slotProps.data.sku }}
-              </template>
+            <template #body="slotProps">
+                {{ slotProps.data.sku }}
+            </template>
           </Column>
           <Column field="attributes" header="Atributos">
-              <template #body="slotProps">
-                  {{ slotProps.data.attributes.join(',\r') }}
-              </template>
+            <template #body="slotProps">
+                {{ slotProps.data.attributes.join(',\r') }}
+            </template>
           </Column>
           <Column field="price" header="Valor">
-              <template #body="slotProps">
-                  {{ slotProps.data.price | money }}
-              </template>
+            <template #body="slotProps">
+                {{ slotProps.data.price | money }}
+            </template>
           </Column>
           <Column field="expectedPrice" header="Preço Sugerido">
-              <template #body="slotProps">
-                  {{ slotProps.data.expectedPrice | money }}
-              </template>
+            <template #body="slotProps">
+                {{ slotProps.data.expectedPrice | money }}
+            </template>
           </Column>
            <Column field="status" header="Color" headerStyle="display: none" bodyStyle="display: none"></Column>
         </DataTable>
@@ -71,7 +71,12 @@ export default {
   },
   mounted () {
     this.loading = false
-    console.log(this.skusList)
+  },
+  methods: {
+    rowClass (data) {
+      console.log(data.status)
+      return data.status === 'Preço compatível' ? null : 'uncompatible'
+    }
   },
   filters: {
     money (value) {
@@ -88,6 +93,10 @@ export default {
 </style>
 
 <style lang="scss">
+.uncompatible {
+    background: #ff525280 !important;
+}
+
 .p-column-title {
   color: #6a5aff;
 }
