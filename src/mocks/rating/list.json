@@ -1,0 +1,17 @@
+[
+    {
+        "customer": "@heliubiancardi",
+        "value": "4.5",
+        "comments": "Produto top!"
+    },
+    {
+        "customer": "@brunogaignoux",
+        "value": "3.5",
+        "comments": "Produto demorou muito e não é tão bom quanto parecia."
+    },
+    {
+        "customer": "@luizabaratojo",
+        "value": "1.5",
+        "comments": "Péssimo produto. Não recomendo!"
+    }
+]
