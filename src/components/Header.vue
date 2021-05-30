@@ -64,8 +64,27 @@ export default {
   data () {
     return {
       active: 0,
+      countdown: '00:60',
       change: false
     }
+  },
+  methods: {
+    timer () {
+      let timer, seconds
+
+      setInterval(() => {
+        seconds = parseInt(timer % 60, 10)
+        seconds = seconds < 10 ? '0' + seconds : seconds
+        this.countdown = '00:' + seconds
+
+        if (--timer < 0) {
+          timer = 60
+        }
+      }, 1000)
+    }
+  },
+  created () {
+    this.timer()
   }
 }
 </script>

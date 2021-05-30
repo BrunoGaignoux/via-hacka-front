@@ -1,0 +1,36 @@
+{
+    "monthly": {
+        "labels": ["Jan", "Feb", "Mar", "Abr", "Mai", "Jun", "Jul"],
+        "datasets": [
+          {
+            "label": "Suas Vendas",
+            "data": [100, 75, 264, 172, 20, 60, 120],
+            "fill": false,
+            "borderColor": "#42A5F5"
+          },
+          {
+            "label": "Mercado",
+            "data": [300, 200, 300, 100, 10, 120, 365],
+            "fill": false,
+            "borderColor": "#FFA726"
+          }
+        ]
+    },
+    "daily": {
+        "labels": ["24/05", "25/05", "26/05", "27/05", "28/05", "29/05", "30/05"],
+        "datasets": [
+          {
+            "label": "Suas Vendas",
+            "data": [100, 75, 264, 172, 20, 60, 120],
+            "fill": false,
+            "borderColor": "#42A5F5"
+          },
+          {
+            "label": "Mercado",
+            "data": [300, 200, 300, 100, 10, 120, 365],
+            "fill": false,
+            "borderColor": "#FFA726"
+          }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "customer": "@heliubiancardi",
+        "value": "4.5",
+        "comment": "Produto top!"
+    },
+    {
+        "customer": "@brunogaignoux",
+        "value": "3.5",
+        "comment": "Produto demorou muito e não é tão bom quanto parecia."
+    },
+    {
+        "customer": "@luizabaratojo",
+        "value": "1.5",
+        "comment": "Péssimo produto. Não recomendo!"
+    },
+    {
+        "customer": "@gabrielmsilva",
+        "value": "5.0",
+        "comment": "Péssimo ótimo. Não há o que reclamar!"
+    },
+    {
+        "customer": "@joserafaelneto1",
+        "value": "4.5",
+        "comment": "Péssimo perfeito. Funcionou perfeiitamente como o esperado!"
+    },
+    {
+        "customer": "@lzf",
+        "value": "1",
+        "comment": "Não gostei do produto e demorou para entregar."
+    }
+]

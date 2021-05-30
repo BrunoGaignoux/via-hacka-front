@@ -51,6 +51,9 @@ export default {
   components: {
     Timeline
   },
+  props: {
+    data: Array
+  },
   data () {
     return {
       events1: [
