@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="p-mb-0">{{ rating }}</h1>
-    <StarRating :rating=rating />
+    <StarRating :rating=rating size="lg" />
   </div>
 </template>
 

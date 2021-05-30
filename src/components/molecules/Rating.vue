@@ -1,12 +1,12 @@
 <template>
   <div class="rating p-grid p-ai-center vertical-container">
-    <div class="p-col">
-      <h5>{{ rating.customer }}</h5>
+    <div class="p-col p-p-0 p-ml-6 p-text-left">
+      <h5 class="p-my-3">{{ rating.customer }}</h5>
     </div>
-    <div class="p-col">
-      <StarRating :rating="rating.value" />
+    <div class="p-col p-p-0 p-text-center">
+      <StarRating :rating="rating.value" size="sm" />
     </div>
-    <div class="p-col">
+    <div class="p-col p-p-0">
       <box-icon name='message-detail' :type='getDetailsType()' @click="toggleDetails()"></box-icon>
     </div>
     <div class="details p-col-12 p-p-0">
@@ -51,7 +51,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.rating {
-  background: #F3F4F4;
-}
 </style>

@@ -1,27 +1,33 @@
 <template>
-  <div>
+  <div class="p-col-6">
       <h1>Avaliações</h1>
-      <!-- <Rating :v-for="rating in ratingList" :rating="rating" /> -->
+      <Card class="p-shadow-4 p-my-3" :key="rating.customer" v-for="rating in ratingList">
+        <template #content>
+          <Rating  :rating="rating" />
+        </template>
+      </Card>
+      <Button label="Contestar avaliação" class="p-button-outlined p-button-help" />
   </div>
 </template>
 
 <script>
-// import Rating from '../molecules/Rating'
+import Rating from '../molecules/Rating'
+import Card from 'primevue/card'
+import MockRatingList from '../../mocks/rating/list.json'
 
 export default {
   name: 'RatingList',
-  props: {
-    ratingList: Array
-  },
-  mounted: () => {
-    console.log(this.ratingList)
-  },
   components: {
-    // Rating
+    Rating,
+    Card
+  },
+  data () {
+    return {
+      ratingList: MockRatingList
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
 </style>

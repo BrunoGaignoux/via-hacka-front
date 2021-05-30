@@ -1,6 +1,6 @@
 <template>
   <div>
-    <box-icon :key="star" v-for="star in stars.amount" :color="getStarColor(star)" :name="getStarName(star)" type="solid" />
+    <box-icon :key="star" v-for="star in stars.amount" :color="getStarColor(star)" :name="getStarName(star)" type="solid" :size="size" />
   </div>
 </template>
 
@@ -8,7 +8,8 @@
 export default {
   name: 'Rating',
   props: {
-    rating: String
+    rating: String,
+    size: String
   },
   data: () => {
     return {
