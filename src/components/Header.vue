@@ -1,18 +1,30 @@
 <template>
   <div>
-    <div class="default-background-color mb-10 p-grid p-shadow-8">
-      <div class="p-col">
-        <box-icon name="menu" color="#fff"/>
-      </div>
-      <div class="p-col">
-          Painel do Seller
-      </div>
-      <div class="p-col">
-        <box-icon name="exit" color="#fff"></box-icon>
+    <div class="default-background-color fixed mb-10 p-grid p-shadow-8">
+      <div class="p-col-12 p-d-flex p-jc-between p-ai-center">
+        <div class="p-d-flex p-ai-center">
+          <box-icon
+            :name="`${change ? 'x' : 'menu'}`"
+            color="#fff"
+            @click="change = !change"
+            class="bx-tada-hover"
+          />
+        </div>
+        <div class="p-d-flex p-ai-center">
+            Painel do Seller
+        </div>
+        <div class="p-d-flex p-ai-center">
+          <Avatar
+            image="https://www.primefaces.org/primevue/showcase-v2/demo/images/avatar/amyelsner.png"
+            class="p-mr-2"
+            shape="circle"
+          />
+          Olá, Fernanda
+        </div>
       </div>
     </div>
     <div class="p-grid">
-      <div class="p-mt-2 selector">
+      <div class="selector">
         <div class="p-col">
           <Button
             label="Hoje"
@@ -22,9 +34,16 @@
         </div>
         <div class="p-col">
           <Button
-            label="Mês"
+            label="Semana"
             :class="`p-button-rounded p-button-sm text-white ${active == 1 ? 'p-button-primary' : 'p-button-secondary'}`"
             @click="active = 1"
+          />
+        </div>
+        <div class="p-col">
+          <Button
+            label="Mês"
+            :class="`p-button-rounded p-button-sm text-white ${active == 2 ? 'p-button-primary' : 'p-button-secondary'}`"
+            @click="active = 2"
           />
         </div>
       </div>
@@ -33,11 +52,17 @@
 </template>
 
 <script>
+import Avatar from 'primevue/avatar'
+
 export default {
   name: 'Header',
+  components: {
+    Avatar
+  },
   data () {
     return {
-      active: 0
+      active: 0,
+      change: false
     }
   }
 }
@@ -50,8 +75,15 @@ export default {
 }
 .selector {
   position: relative;
-  left: 87%;
+  margin-top: 3%;
+  left: 88%;
+  top: 10px;
   width: 120px;
   display: flex;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 </style>

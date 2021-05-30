@@ -1,42 +1,84 @@
-@import 'primeflex/src/_variables';
-@import 'primeflex/src/_grid';
-@import 'primeflex/src/_formlayout';
-@import 'primeflex/src/_display';
-@import 'primeflex/src/_text';
-@import 'primeflex/src/flexbox/_flexbox';
-@import 'primeflex/src/_spacing';
-@import 'primeflex/src/_elevation';
+@import "primeflex/src/_variables";
+@import "primeflex/src/_grid";
+@import "primeflex/src/_formlayout";
+@import "primeflex/src/_display";
+@import "primeflex/src/_text";
+@import "primeflex/src/flexbox/_flexbox";
+@import "primeflex/src/_spacing";
+@import "primeflex/src/_elevation";
 
-$color: linear-gradient(
-    45deg,
-    rgba(106, 90, 255, 1) 0%,
-    rgba(0, 211, 195, 1) 100%
-);
+$color: linear-gradient(45deg, rgba(106, 90, 255, 1) 0%, rgba(0, 211, 195, 1) 100%);
+$primary: #6a5aff;
+$focus: 0 0 0.2em $primary;
 
 #app {
-    font-family: Aeonik, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
+  font-family: Aeonik, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 
-.default-color {
+  input:focus {
+    border-color: $primary;
+    box-shadow: $focus;
+  }
+
+  .p-progressbar-value {
+    background: $primary;
+  }
+
+  .default-color {
     color: $color;
-}
+  }
 
-.default-background-color {
-    background: $color !important;
-}
+  .default-background-color {
+    background: $color;
+  }
 
-.p-button-primary {
-  color: white !important;
-  font-weight: bold !important;
-  background: #6a5aff !important;
-  border-color: #6a5aff !important;
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    background: $primary;
+  }
+  .p-dropdown:not(.p-disabled).p-focus {
+    border-color: $primary;
+    box-shadow: $focus;
+  }
 
-  &:hover {
-    background: #00d3c3 !important;
-    border-color: #00d3c3 !important;
+  .p-radiobutton .p-radiobutton-box.p-highlight {
+    background: $primary;
+    border-color: $primary;
+    &:not(.p-disabled).p-focus {
+      border-color: $primary;
+      box-shadow: $focus;
+    }
+  }
+
+  .p-button-primary {
+    color: white;
+    font-weight: bold;
+    background: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background: darken($primary, 5%);
+      border-color: darken($primary, 5%);
+    }
+    &:focus {
+      border-color: $primary;
+      box-shadow: $focus;
+    }
+  }
+
+  .p-button-outlined {
+    color: $primary;
+    border-color: $primary;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: $focus;
+    }
+  }
+
+  .w-100 {
+    width: 100%;
   }
 }
