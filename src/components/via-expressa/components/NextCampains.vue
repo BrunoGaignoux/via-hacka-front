@@ -1,6 +1,6 @@
 <template>
   <div class="p-grid p-p-2 p-mr-1">
-    <div class="p-col p-shadow-8 p-mt-2">
+    <div class="p-col p-shadow-4 p-mt-2">
       <div class="p-col-12 p-p-2">
         <box-icon name="calendar-alt" color="#6a5aff" size="lg" />
       </div>

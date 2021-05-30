@@ -1,5 +1,5 @@
 <template>
-  <div class="p-col p-shadow-8">
+  <div class="p-col p-shadow-4">
     <div class="p-col-12 p-p-2">
       <box-icon :name="iconName" :color="iconColor" :size="iconSize" />
     </div>
