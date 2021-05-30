@@ -5,6 +5,10 @@
     <ScrollTop :threshold="10" />
     <div class="p-grid">
       <div class="p-col">
+        <div class="p-grid">
+          <StrongPointCard title="Ponto Forte" icon="user-plus" message="Qualidade no atendimento" />
+          <StrongPointCard title="Ponto a fortalecer" icon="user-minus" message="Valor do frete" />
+        </div>
         <TrainingListCard />
         <BonusListCard />
       </div>
@@ -30,6 +34,7 @@ import RatingListCard from './components/templates/RatingListCard'
 import AverageRating from './components/molecules/AverageRating'
 import SalesChartCard from './components/templates/SalesChartCard'
 import CatalogPower from './components/molecules/CatalogPower'
+import StrongPointCard from './components/templates/StrongPointCard'
 
 export default {
   name: 'App',
@@ -43,7 +48,8 @@ export default {
     RatingListCard,
     PriceSuggestionCard,
     SalesChartCard,
-    CatalogPower
+    CatalogPower,
+    StrongPointCard
   }
 }
 </script>
