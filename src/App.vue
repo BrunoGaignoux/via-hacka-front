@@ -1,58 +1,26 @@
 <template>
   <div id="app">
     <Header/>
-    <div class="p-grid">
-      <div class="p-col-8 p-mt-3 p-p-2">
-        <div class="p-grid p-p-2">
-          <div class="p-col-6 p-shadow-8">
-            6
-          </div>
-          <div class="p-col-6 p-shadow-8">
-            6
-          </div>
-          <div class="p-col-6 p-shadow-8">
-            6
-          </div>
-          <div class="p-col-6 p-shadow-8">
-            6
-          </div>
-        </div>
-      </div>
-      <div class="p-col-4 p-mt-3 p-p-2">
-        <div class="p-grid p-p-2">
-          <div class="p-col-12 p-shadow-8">
-            6
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="p-grid p-mt-3">
-      <div class="p-col p-shadow-8 p-m-2">1</div>
-      <div class="p-col p-shadow-8 p-m-2">2</div>
-      <div class="p-col p-shadow-8 p-m-2">3</div>
-    </div>
+    <ViaExpressa/>
+    <ScrollTop :threshold="10" />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Header from './components/Header'
+import ViaExpressa from './components/via-expressa/Index'
+import ScrollTop from 'primevue/scrolltop'
+
 export default {
-  components: { Header },
-  name: 'App',
-  data () {
-    return {
-      active: 1
-    }
-  }
+  components: {
+    Header,
+    ViaExpressa,
+    ScrollTop
+  },
+  name: 'App'
 }
 </script>
 <style lang="scss" scoped>
-.selector {
-  position: relative;
-  left: 47%;
-  width: 120px;
-  display: flex;
-}
 .mt-10 {
   margin-top: 10px;
 }
