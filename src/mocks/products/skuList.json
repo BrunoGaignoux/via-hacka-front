@@ -4,27 +4,31 @@
         "sku": "17154565449891",
         "attributes": ["teste", "teste2", "teste3"],
         "price": 150.63,
-        "expectedPrice": 150.63
+        "expectedPrice": 150.63,
+        "status": "Preço compatível"
     },
     {
         "id": 2,
         "sku": "19871716584846",
         "attributes": ["teste", "teste2", "teste3"],
         "price": 293.30,
-        "expectedPrice": 200.00
+        "expectedPrice": 200.00,
+        "status": "Preço não compatível"
     },
     {
         "id": 3,
         "sku": "68498465291288",
         "attributes": ["teste", "teste2", "teste3"],
         "price": 50.36,
-        "expectedPrice": 50.36
+        "expectedPrice": 50.36,
+        "status": "Preço compatível"
     },
     {
         "id": 4,
         "sku": "47416512691677",
         "attributes": ["teste", "teste2", "teste3"],
         "price": 28.58,
-        "expectedPrice": 28.58
+        "expectedPrice": 28.58,
+        "status": "Preço compatível"
     }
 ]

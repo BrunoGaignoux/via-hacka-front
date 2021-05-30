@@ -3,12 +3,17 @@
     <div class="p-grid">
       <h1 class="title p-col-5 p-text-left p-pl-4 p-my-0">Sugestão de preços</h1>
       <div class="filters p-col-7 p-text-right p-my-auto">
-        <InputText type="text" v-model="filters['sku']" class="p-column-filter" placeholder="Filtrar por SKU"/>
+        <Dropdown v-model="filters['status']" :options="statuses" placeholder="Selecione um filtro" class="p-column-filter p-text-left">
+          <template #option="slotProps">
+            <span>{{slotProps.option}}</span>
+          </template>
+        </Dropdown>
+        <InputText type="text" v-model="filters['sku']" class="p-column-filter p-ml-5" placeholder="Filtrar por SKU"/>
       </div>
     </div>
     <Card class="p-shadow-4 p-my-3">
       <template #content>
-        <DataTable :value="skusList" :paginator="true" class="p-datatable-customers" :rows="10"
+        <DataTable :value="skusList" :paginator="true" :rows="10"
           dataKey="id" :filters="filters" :loading="loading">
           <template #empty>
               Nenhuma sugestão encontrada.
@@ -28,14 +33,15 @@
           </Column>
           <Column field="price" header="Valor">
               <template #body="slotProps">
-                  {{ slotProps.data.price }}
+                  {{ slotProps.data.price | money }}
               </template>
           </Column>
           <Column field="expectedPrice" header="Preço Sugerido">
               <template #body="slotProps">
-                  {{ slotProps.data.expectedPrice }}
+                  {{ slotProps.data.expectedPrice | money }}
               </template>
           </Column>
+           <Column field="status" header="Color" headerStyle="display: none" bodyStyle="display: none"></Column>
         </DataTable>
       </template>
     </Card>
@@ -59,12 +65,18 @@ export default {
     return {
       skusList: MockProductSkuList,
       filters: {},
-      loading: true
+      loading: true,
+      statuses: ['Preço compatível', 'Preço não compatível']
     }
   },
   mounted () {
     this.loading = false
     console.log(this.skusList)
+  },
+  filters: {
+    money (value) {
+      return `R$ ${value.toString().replace('.', ',')}`
+    }
   }
 }
 </script>
