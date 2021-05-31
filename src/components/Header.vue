@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="default-background-color fixed mb-10 p-grid p-shadow-8">
+    <div class="default-background-color mb-10 p-grid p-shadow-4">
       <div class="p-col-12 p-d-flex p-jc-between p-ai-center">
         <div class="p-d-flex p-ai-center">
           <box-icon
@@ -10,7 +10,7 @@
             class="bx-tada-hover"
           />
         </div>
-        <div class="p-d-flex p-ai-center">
+        <div class="p-d-flex p-ai-center p-text-bold">
             Painel do Seller
         </div>
         <div class="p-d-flex p-ai-center">
@@ -19,27 +19,29 @@
             class="p-mr-2"
             shape="circle"
           />
-          Olá, Fernanda
+          <span class="p-text-bold">
+            Olá, Fernanda
+          </span>
         </div>
       </div>
     </div>
     <div class="p-grid">
-      <div class="selector">
-        <div class="p-col">
+      <div class="p-col-12 p-d-flex p-ai-center selector p-jc-end">
+        <div class="p-d-flex p-ai-center p-mr-3">
           <Button
             label="Hoje"
             :class="`p-button-rounded p-button-sm text-white ${active == 0 ? 'p-button-primary' : 'p-button-secondary'}`"
             @click="active = 0"
           />
         </div>
-        <div class="p-col">
+        <div class="p-d-flex p-ai-center p-mr-3">
           <Button
             label="Semana"
             :class="`p-button-rounded p-button-sm text-white ${active == 1 ? 'p-button-primary' : 'p-button-secondary'}`"
             @click="active = 1"
           />
         </div>
-        <div class="p-col">
+        <div class="p-d-flex p-ai-center p-mr-3">
           <Button
             label="Mês"
             :class="`p-button-rounded p-button-sm text-white ${active == 2 ? 'p-button-primary' : 'p-button-secondary'}`"
@@ -62,8 +64,27 @@ export default {
   data () {
     return {
       active: 0,
+      countdown: '00:60',
       change: false
     }
+  },
+  methods: {
+    timer () {
+      let timer, seconds
+
+      setInterval(() => {
+        seconds = parseInt(timer % 60, 10)
+        seconds = seconds < 10 ? '0' + seconds : seconds
+        this.countdown = '00:' + seconds
+
+        if (--timer < 0) {
+          timer = 60
+        }
+      }, 1000)
+    }
+  },
+  created () {
+    this.timer()
   }
 }
 </script>
@@ -74,12 +95,7 @@ export default {
   color: #fff;
 }
 .selector {
-  position: relative;
-  margin-top: 3%;
-  left: 88%;
-  top: 10px;
-  width: 120px;
-  display: flex;
+  margin-top: 15px;
 }
 .fixed {
   position: fixed;

@@ -8,7 +8,7 @@
               v-model="value"
               valueTemplate="{value}%"
               disabled
-              :size=300
+              :size="300"
               valueColor="#6a5aff"
               rangeColor="#cccccc"
             />

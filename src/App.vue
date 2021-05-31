@@ -3,7 +3,10 @@
     <Header/>
     <ViaExpressa/>
     <ScrollTop :threshold="10" />
-    <div class="p-grid">
+    <Divider align="center" type="dashed" class="p-mt-6">
+        <b>Via Local</b>
+    </Divider>
+    <div class="p-grid p-mt-6">
       <div class="p-col">
         <div class="p-grid">
           <StrongPointCard title="Ponto Forte" icon="user-plus" message="Qualidade no atendimento" />

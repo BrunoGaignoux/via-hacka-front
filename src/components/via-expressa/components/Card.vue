@@ -1,5 +1,5 @@
 <template>
-  <div class="p-col p-shadow-8">
+  <div class="p-col p-shadow-4">
     <div class="p-col-12 p-p-2">
       <box-icon :name="iconName" :color="iconColor" :size="iconSize" />
     </div>
@@ -7,7 +7,8 @@
       <span class="p-text-primary">{{ title }}</span>
     </div>
     <div class="p-col-12 p-p-2">
-      <h2>{{ description }}</h2>
+      <h2 v-if="description">{{ description }}</h2>
+      <h2 v-if="money">{{ money | currency }}</h2>
     </div>
   </div>
 </template>
@@ -26,7 +27,8 @@ export default {
       required: false
     },
     title: String,
-    description: String
+    description: [String, Number],
+    money: [String, Number]
   }
 }
 </script>
