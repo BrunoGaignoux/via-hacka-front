@@ -1,4 +1,5 @@
-# kraken-front
+# Abr.Via Frontend
+Repositório do projeto desenvolvido para o hackaton da via varejo
 
 ## Project setup
 ```
