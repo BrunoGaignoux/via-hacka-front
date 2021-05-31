@@ -22,6 +22,7 @@ import ProgressSpinner from 'primevue/progressspinner'
 import FileUpload from 'primevue/fileupload'
 import ProgressBar from 'primevue/progressbar'
 import Knob from 'primevue/knob'
+import Divider from 'primevue/divider'
 // import Ripple from 'primevue/ripple';
 
 // Vue.directive('ripple', Ripple);
@@ -34,6 +35,7 @@ Vue.component('FileUpload', FileUpload)
 Vue.component('ProgressBar', ProgressBar)
 Vue.component('ProgressSpinner', ProgressSpinner)
 Vue.component('Knob', Knob)
+Vue.component('Divider', Divider)
 Vue.component('Chart', Chart)
 
 Vue.prototype.$http = axios
